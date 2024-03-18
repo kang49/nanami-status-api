@@ -1,7 +1,7 @@
 {
   "name": "nanami-status-api",
   "main": "./dist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "tsc && node .",
     "start": "tsc && PORT=3002 node dist/index.js",

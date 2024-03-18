@@ -1,6 +1,7 @@
 import express from 'express';
 import os from 'os';
 const pm2 = require('pm2');
+require('dotenv').config()
 
 const app = express();
 
