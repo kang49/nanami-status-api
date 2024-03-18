@@ -4,6 +4,12 @@ const pm2 = require('pm2');
 require('dotenv').config()
 
 const app = express();
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Allow all hosts
+    res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, PATCH, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Origin, Authorization');
+    next();
+});
 
 app.get('/', (req, res) => {
     pm2.connect(function (err: string) {
