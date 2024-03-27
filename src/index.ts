@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
             res.json({
                 cpu_usage: processInfo.monit.cpu,
-                memory_usage: processInfo.monit.memory,
+                memory_usage: processInfo.monit.memory / (1024 ** 2),
                 server_name: os.hostname(),
                 cpu_name: `${os.cpus().map((i) => i.model)[0]}`
             });

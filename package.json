@@ -4,8 +4,9 @@
   "version": "1.0.1",
   "scripts": {
     "dev": "tsc && node .",
-    "start": "tsc && PORT=3002 node dist/index.js",
-    "build": "tsc"
+    "start": "PORT=3000 node dist/index.js",
+    "build": "tsc",
+    "product": "bun install && bun update && tsc"
   },
   "dependencies": {
     "@types/express": "^4.17.21",
